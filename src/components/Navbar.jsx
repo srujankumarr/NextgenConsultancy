@@ -85,14 +85,14 @@ const Navbar = () => {
             >
               Trends & Insights
             </Link>
-            <Link
+            {/* <Link
               to="/contact"
               className={`text-lg lg:text-lg px-6 py-3 text-gray-900 hover:text-[#194aff] transition-colors duration-300 font-medium ${
                 location.pathname === "/" ? "text-[#194aff]" : ""
               }`}
             >
               Contact
-            </Link>
+            </Link> */}
           </div>
 
           {/* CTA Button - visible on tablets and desktop */}
