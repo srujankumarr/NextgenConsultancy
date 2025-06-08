@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-[#1f2b38] text-white py-8">
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#1f2b38] text-white py-8 ">
+      <div className="max-w-[90rem]  mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Quick Links */}
-          <div className="mb-6 sm:mb-0">
+          <div className="mb-6 sm:mb-0  lg:col-span-1 ">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -53,71 +53,64 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
           {/* Our Services */}
-          <div className="mb-6 sm:mb-0">
+          <div className="mb-6 sm:mb-0  lg:col-span-3 ">
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/"
-                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
-                >
-                  Business Strategy & Transformation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
-                >
-                  Digital & AI Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
-                >
-                  Market Expansion & Growth
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
-                >
-                  Financial & Risk Management
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
-                >
-                  HR & Talent Optimization
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
-                >
-                  Brand & Marketing
-                </Link>
-              </li>
-            </ul>
+            <div className="grid grid-cols-2 gap-8">
+              {(() => {
+                const allServices = [
+                  "Brand & Marketing",
+                  "Business Analysts",
+                  "Business Strategy & Transformation",
+                  "Data Analytics",
+                  "DevOps Engineer",
+                  "Digital & AI Solutions",
+                  "Financial & Risk Management",
+                  "HR & Talent Optimization",
+                  "Identity and Access Management (IAM)",
+                  "JAVA/J2EE Engineers",
+                  "Market Expansion & Growth",
+                  "Network Engineers",
+                  "OKTA Consultant",
+                  "SailPoint IIQ/ISC",
+                  "SAP Consultant",
+                  "Saviyant ESC",
+                  "Scrum masters",
+                ].sort();
+
+                const half = Math.ceil(allServices.length / 2);
+                const columns = [
+                  allServices.slice(0, half),
+                  allServices.slice(half),
+                ];
+
+                return columns.map((column, colIdx) => (
+                  <ul key={colIdx} className="space-y-2">
+                    {column.map((service) => (
+                      <li key={service}>
+                        <Link
+                          to="/"
+                          className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
+                        >
+                          {service}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ));
+              })()}
+            </div>
           </div>
 
           {/* Contact Us */}
-          <div>
+          <div className=" lg:col-span-2 break-words">
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <address className="not-italic text-sm sm:text-base text-gray-400">
               <p className="mb-2">
                 Address: 3347 Belterra Point Dr,New Hill, NC 27562
               </p>
               <p className="mb-2">Phone: +1 984-355-0788</p>
-              <p className="mb-2">Email: operations@newdomainname.com</p>
+              <p className="mb-2">Email:marketing@nexgentechnoconsulting.com</p>
             </address>
 
             {/* Add links to social media icons */}

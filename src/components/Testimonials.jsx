@@ -50,65 +50,55 @@ const Testimonial = () => {
   ];
 
   return (
-    <div className="py-20 overflow-hidden">
+    <div className=" overflow-hidden">
       {/* Header */}
-      <div className="flex flex-col items-center gap-6 mb-[100px]">
-        <p className="w-[240px] h-[64px] font-poppins font-semibold text-[32px] leading-[64px] text-center text-[#194aff]">
+      <div className="flex flex-col items-center gap-4 px-4 text-center mb-16">
+        <p className="text-[#194aff] text-2xl sm:text-3xl font-semibold font-poppins">
           Testimonials
         </p>
-        <h1 className="w-[743px] h-[64px] font-poppins font-semibold text-[45px] leading-[64px] text-center text-black">
+        <h1 className="text-black text-2xl sm:text-4xl font-semibold font-poppins max-w-3xl leading-snug">
           What Our Clients Say About Us
         </h1>
       </div>
 
       {/* Cards Container */}
-      <div className="overflow-x-auto scrollbar-hide">
-        <div className="flex gap-8 px-6 sm:px-12 w-max">
-          {testimonials.map((testimonial, index) => (
+      <div >
+        <div className="grid lg:grid-cols-2 grid cols-1 gap-4">
+          {testimonials.map((testimonial) => (
             <div
-              key={index}
-              style={{
-                width: "698px",
-                height: "381px",
-                padding: "2.5rem",
-                borderRadius: "1rem",
-                backgroundColor: "#082545",
-                border: "1px solid rgba(53, 53, 255, 0.7)",
-                boxSizing: "border-box",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-              }}
+              key={testimonial.id}
+              className="min-w-[300px] sm:min-w-[500px] lg:min-w-[650px] max-w-full bg-[#082545] border border-[rgba(53,53,255,0.7)] rounded-2xl p-6 sm:p-10 flex flex-col justify-between"
             >
               {/* Recommendation and Quote */}
               <div>
-                <p className="text-white mb-10 text-[24px] font-normal leading-[100%] font-inter">
+                <p className="text-white mb-6 text-base sm:text-xl font-inter">
                   {testimonial.recommendation}
                 </p>
-                <p className="text-white mb-4 text-[20px] font-normal leading-[100%] font-inter">
+                <p className="text-white mb-4 text-sm sm:text-lg font-inter leading-snug">
                   "{testimonial.quote}"
                 </p>
               </div>
+
               {/* Footer with Profile & Rating */}
-              <div className="flex items-center justify-between mt-6">
+              <div className="flex items-center justify-between mt-6 flex-wrap gap-4 ">
                 <div className="flex items-center space-x-4">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-30 h-30 rounded-full object-cover"
+                    className="w-14 h-14 rounded-full object-cover"
                   />
                   <div>
-                    <p className="text-white font-semibold text-lg font-inter">
+                    <p className="text-white font-semibold text-sm sm:text-base font-inter">
                       {testimonial.name}
                     </p>
-                    <p className="text-sm text-gray-300 font-inter">
+                    <p className="text-xs sm:text-sm text-gray-300 font-inter">
                       {testimonial.title}
                     </p>
                   </div>
                 </div>
                 <div className="flex text-[#D64CE8]">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} fill="#D64CE8" size={44} />
+                    <Star key={i} fill="#D64CE8" size={24} />
                   ))}
                 </div>
               </div>
@@ -117,7 +107,7 @@ const Testimonial = () => {
         </div>
       </div>
 
-      {/* Scrollbar Hide Style */}
+      {/* Scrollbar Hide */}
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
