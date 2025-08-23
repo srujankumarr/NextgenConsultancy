@@ -89,12 +89,12 @@ const CaseStudies = () => {
 
                 {/* Buttons with Hover Effects */}
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-1 sm:mt-2">
-                  <a
-                    href="#"
+                  <button
+                    onClick={() => navigate("/services")}
                     className="inline-block px-4 sm:px-6 py-2 sm:py-3 border border-[#195aff] text-[#195aff] rounded-xl text-center text-sm sm:text-base hover:scale-105 transition-transform duration-300"
                   >
                     Learn More
-                  </a>
+                  </button>
                   <button
                     onClick={() => navigate("/contact")}
                     className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#194aff] to-[#9747ff] text-white rounded-xl text-center text-sm sm:text-base hover:scale-105 transition-transform"
