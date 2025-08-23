@@ -223,10 +223,13 @@ const CaseStudies = () => {
                   </div>
 
                   <div className="flex justify-end mt-auto">
-                    <button className="bg-gradient-to-r from-[#194aff] to-[#9747ff] hover:from-[#0e38cc] hover:to-[#7e3ad6] text-white text-sm px-4 py-2 rounded-xl transition-all duration-300 flex items-center hover:shadow-lg transform hover:-translate-y-1">
+                    <Link
+                      to={`/success-story/${story.id}`}
+                      className="bg-gradient-to-r from-[#194aff] to-[#9747ff] hover:from-[#0e38cc] hover:to-[#7e3ad6] text-white text-sm px-4 py-2 rounded-xl transition-all duration-300 flex items-center hover:shadow-lg transform hover:-translate-y-1"
+                    >
                       Read More
                       <ArrowRight className="ml-2" size={16} />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
