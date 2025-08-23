@@ -1,7 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="bg-[#1f2b38] text-white py-8 ">
       <div className="max-w-[90rem]  mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,44 +19,52 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link
-                  to="/"
-                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
+                <button
+                  onClick={() => handleNavigation("/")}
+                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors text-left w-full"
                 >
                   Home
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/about"
-                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
+                <button
+                  onClick={() => handleNavigation("/about")}
+                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors text-left w-full"
                 >
                   About Us
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/case-studies"
-                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
+                <button
+                  onClick={() => handleNavigation("/case-studies")}
+                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors text-left w-full"
                 >
                   Case Studies
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/trends"
-                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
+                <button
+                  onClick={() => handleNavigation("/trends")}
+                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors text-left w-full"
                 >
                   Trends & Insights
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/contact"
-                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
+                <button
+                  onClick={() => handleNavigation("/contact")}
+                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors text-left w-full"
                 >
                   Contact
-                </Link>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavigation("/services")}
+                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors text-left w-full"
+                >
+                  Services
+                </button>
               </li>
             </ul>
           </div>
