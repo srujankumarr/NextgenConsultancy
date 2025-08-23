@@ -3,8 +3,10 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CaseStudies = () => {
+  const navigate = useNavigate();
   const stories = [
     {
       id: "01",
@@ -93,12 +95,13 @@ const CaseStudies = () => {
                   >
                     Learn More
                   </a>
-                  <a
-                    href="#"
+                  <button
+                    onClick={() => navigate("/contact")}
                     className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#194aff] to-[#9747ff] text-white rounded-xl text-center text-sm sm:text-base hover:scale-105 transition-transform"
                   >
                     Contact Us
-                  </a>
+                  </button>
+                  
                 </div>
               </div>
             </div>

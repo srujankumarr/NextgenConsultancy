@@ -161,7 +161,7 @@ const Contact = () => {
                     <Mail className="text-white" size={20} />
                   </div>
                   <span className="text-base sm:text-lg break-all sm:break-normal">
-                    operations@newdomainname.com
+                    marketing@nextgentechnoconsulting.com
                   </span>
                 </div>
               </div>

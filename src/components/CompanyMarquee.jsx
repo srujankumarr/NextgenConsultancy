@@ -7,7 +7,7 @@ const CompanyMarquee = () => {
     const marquee = marqueeRef.current;
     if (!marquee) return;
   
-    const speed =7;
+    const speed = 2;
 
     let direction = -1;
     let scrollPosition = marquee.scrollWidth - marquee.clientWidth;
