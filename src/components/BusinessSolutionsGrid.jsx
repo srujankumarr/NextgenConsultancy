@@ -36,7 +36,7 @@ const services = [
     title: 'Brand Development & Marketing Strategy',
     details: 'Make informed decisions with real-time data dashboards and reporting.',
     image: '/EmpoweringImages/bd.png',
-    icon: 'vectorimages/vector6.png'
+    icon: '/vectorimages/vector6.png'
   },
 ];
 
