@@ -64,7 +64,7 @@ const Navbar = () => {
             <Link
               to="/about"
               className={`text-base lg:text-lg px-6 py-3 text-gray-900 hover:text-[#194aff] transition-colors duration-300 font-medium ${
-                location.pathname === "/" ? "text-[#194aff]" : ""
+                location.pathname === "/about" ? "text-[#194aff]" : ""
               }`}
             >
               About Us
@@ -72,7 +72,7 @@ const Navbar = () => {
             <Link
               to="/case-studies"
               className={`text-lg lg:text-lg px-6 py-3 text-gray-900 hover:text-[#194aff] transition-colors duration-300 font-medium ${
-                location.pathname === "/" ? "text-[#194aff]" : ""
+                location.pathname === "/case-studies" ? "text-[#194aff]" : ""
               }`}
             >
               Case Studies
@@ -156,19 +156,19 @@ const Navbar = () => {
             About Us
           </Link>
           <Link
-            to="/case-study"
+            to="/case-studies"
             className={`block pl-3 pr-4 py-2 text-base text-gray-900 hover:bg-gray-50 hover:text-[#194aff] hover:pl-4 transition-all duration-200 ${
-              location.pathname === "/case-study"
+              location.pathname === "/case-studies"
                 ? "bg-gray-50 text-[#194aff] border-l-4 border-[#194aff]"
                 : ""
             }`}
           >
-            Case Study
+            Case Studies
           </Link>
           <Link
             to="/trends"
             className={`block pl-3 pr-4 py-2 text-base text-gray-900 hover:bg-gray-50 hover:text-[#194aff] hover:pl-4 transition-all duration-200 ${
-              location.pathname.includes("/trends")
+              location.pathname === "/trends"
                 ? "bg-gray-50 text-[#194aff] border-l-4 border-[#194aff]"
                 : ""
             }`}
