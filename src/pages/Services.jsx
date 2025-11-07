@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -128,12 +129,12 @@ const Services = () => {
           <p className="text-xl text-blue-100 mb-8">
             Let's discuss how our services can help you achieve your business goals.
           </p>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center justify-center px-8 py-3 border border-transparent rounded-xl shadow-lg text-lg font-medium text-blue-600 bg-white hover:bg-gray-50 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
           >
             Get Started Today
-          </a>
+          </Link>
         </div>
       </section>
 
