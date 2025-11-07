@@ -6,7 +6,7 @@ import CompanyMarquee from "../components/CompanyMarquee";
 import { Link } from "react-router-dom";
 import BusinessSolutionsGrid from "../components/BusinessSolutionsGrid";
 import WhyChooseNexGen from "../components/WhyChooseNexGen";
-import Testimonial from "../components/Testimonials";
+
 
 const Home = () => {
   return (
@@ -168,7 +168,7 @@ const Home = () => {
 
           <BusinessSolutionsGrid />
           <WhyChooseNexGen />
-          <Testimonial />
+          
           <Footer />
         </div>
       </div>
