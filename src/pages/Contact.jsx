@@ -143,7 +143,7 @@ const Contact = () => {
                     <Phone className="text-white" size={20} />
                   </div>
                   <span className="text-base sm:text-lg w-full sm:w-auto">
-                    +1 984-355-0788
+                    +1 (818)851-2473
                   </span>
                 </div>
 
