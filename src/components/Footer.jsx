@@ -124,7 +124,7 @@ const Footer = () => {
               <p className="mb-2">
                 Address: 3347 Belterra Point Dr,New Hill, NC 27562
               </p>
-              <p className="mb-2">Phone: +1 984-355-0788</p>
+              <p className="mb-2">Phone: +1 (818)851-2473</p>
               <p className="mb-2">Email:marketing@nexgentechnoconsulting.com</p>
             </address>
 
